@@ -132,7 +132,7 @@ volumeControl.addEventListener('input', () => {
 // Populate playlist
 trackList.forEach((track, index) => {
     const li = document.createElement('li');
-    li.innerHTML = `<span class="playlist-icon">&#9658;</span> ${track.title} - ${track.artist}`; // &#9658; is the play icon
+    li.innerHTML = `<span class="playlist-icon">&#9658;</span> ${track.title} - ${track.artist}`;
     li.addEventListener('click', () => {
         currentTrackIndex = index;
         loadTrack(currentTrackIndex);
