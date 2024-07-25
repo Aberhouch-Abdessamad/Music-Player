@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
     <div class="player">
-       
         <div class="track-info">
-            
             <img id="track-cover" src="./assets/cover.jpg" alt="Track Cover">
             <h2 id="track-title">Track Title</h2>
             <h3 id="track-artist">Track Artist</h3>
@@ -38,12 +34,17 @@
                     <path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3l0 41.7 0 41.7L52.5 440.6zM256 352l0-96 0-128 0-32c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29l0-64z"/>
                 </svg>
             </button>
+            <button id="shuffle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M403.6 34.6c7.6-6.3 12.4-15.6 12.4-26.6s-4.8-20.3-12.4-26.6L376.6 1.2C365.4-6.6 349.8-6.6 338.6 1.2l-160 133.3-160-133.3C8.3-6.6-7.4-6.6-18.6 1.2L12.4 7.4C4.8 14.3 0 23.6 0 34.6s4.8 20.3 12.4 26.6l160 133.3-160 133.3c-7.6 6.3-12.4 15.6-12.4 26.6s4.8 20.3 12.4 26.6L12.4 408c7.6 6.3 12.4 15.6 12.4 26.6s-4.8 20.3-12.4 26.6L.4 475c7.6 6.3 12.4 15.6 12.4 26.6s-4.8 20.3-12.4 26.6L38 512c11.2-7.9 26.8-7.9 38 0l160-133.3 160 133.3c11.2 7.9 26.8 7.9 38 0l38-37.4c7.6-6.3 12.4-15.6 12.4-26.6s-4.8-20.3-12.4-26.6L243.6 266.6 403.6 34.6z"/>
+                </svg>
+            </button>
         </div>
         <div class="progress-container">
             <input type="range" id="progress" value="0" max="100">
         </div>
         <div class="time-container">
-            <span id="duration">00:00</span>  <span id="total-duration">00:00</span>
+            <span id="duration">00:00</span> <span id="total-duration">00:00</span>
         </div>
         <div class="volume-container">
             <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
@@ -53,7 +54,6 @@
             <ul id="playlist"></ul>
         </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>

@@ -46,6 +46,7 @@ const playButton = document.getElementById('play');
 const pauseButton = document.getElementById('pause');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
+const shuffleButton = document.getElementById('shuffle');
 const progress = document.getElementById('progress');
 const durationDisplay = document.getElementById('duration');
 const totalDurationDisplay = document.getElementById('total-duration');
@@ -107,6 +108,12 @@ nextButton.addEventListener('click', () => {
     playTrack();
 });
 
+shuffleButton.addEventListener('click', () => {
+    currentTrackIndex = Math.floor(Math.random() * trackList.length);
+    loadTrack(currentTrackIndex);
+    playTrack();
+});
+
 audio.addEventListener('timeupdate', () => {
     const progressPercent = (audio.currentTime / audio.duration) * 100;
     progress.value = progressPercent;
@@ -133,7 +140,6 @@ trackList.forEach((track, index) => {
     });
     playlist.appendChild(li);
 });
-
 
 loadTrack(currentTrackIndex);
 updatePlaylistHighlight();
