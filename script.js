@@ -29,6 +29,12 @@ const trackList = [
         cover: "./Title/Albume/Track 4.jpg",
         src: "./Title/Albume/L'morphine - Dokhana (Official Lyric Video).mp3"
     },
+    {
+        title: "Younes (Intro)",
+        artist: "Nessyou",
+        cover: "./Title/Albume/mqdefault.jpg",
+        src: "./Title/Albume/Younes (Intro).mp3"
+    },
 ];
 
 let currentTrackIndex = 0;
