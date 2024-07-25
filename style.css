@@ -6,9 +6,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #282c34;
-    background-image: url("../assets/cover.jpg"); /* Ensure this path is correct */
-    background-size: cover; /* Cover the whole body */
-    background-position: center; /* Center the background image */
 }
 
 .player {
