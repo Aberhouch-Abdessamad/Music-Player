@@ -93,6 +93,12 @@ const updatePlaylistHighlight = () => {
     }
 };
 
+const nextTrack = () => {
+    currentTrackIndex = (currentTrackIndex + 1) % trackList.length;
+    loadTrack(currentTrackIndex);
+    playTrack();
+};
+
 playButton.addEventListener('click', playTrack);
 pauseButton.addEventListener('click', pauseTrack);
 
@@ -102,11 +108,7 @@ prevButton.addEventListener('click', () => {
     playTrack();
 });
 
-nextButton.addEventListener('click', () => {
-    currentTrackIndex = (currentTrackIndex + 1) % trackList.length;
-    loadTrack(currentTrackIndex);
-    playTrack();
-});
+nextButton.addEventListener('click', nextTrack);
 
 shuffleButton.addEventListener('click', () => {
     currentTrackIndex = Math.floor(Math.random() * trackList.length);
@@ -119,6 +121,8 @@ audio.addEventListener('timeupdate', () => {
     progress.value = progressPercent;
     durationDisplay.textContent = formatTime(audio.currentTime);
 });
+
+audio.addEventListener('ended', nextTrack);
 
 progress.addEventListener('input', () => {
     const newTime = (progress.value / 100) * audio.duration;
